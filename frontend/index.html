@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lumière Naturals — My Account</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%231F2E1A' stroke='%23C89B3C' stroke-width='3'/%3E%3Ctext x='32' y='44' font-family='Georgia' font-size='34' font-weight='bold' fill='%23C89B3C' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============ LOGIN SCREEN ============ -->
+  <main id="login-screen" class="login-screen">
+    <form id="login-form" class="login-card" novalidate>
+      <div class="logo-mark logo-mark--lg" aria-hidden="true">L</div>
+      <h1 class="brand-name">Lumière Naturals</h1>
+      <p class="login-tagline">Sign in to your account.</p>
+
+      <label class="field">
+        <span>Email</span>
+        <input id="email" type="email" autocomplete="username" placeholder="you@example.com" required>
+      </label>
+      <label class="field">
+        <span>Password</span>
+        <input id="password" type="password" autocomplete="current-password" placeholder="••••••••" required>
+      </label>
+
+      <button id="login-button" type="submit" class="btn btn--primary">Log In</button>
+      <p id="login-error" class="login-error" role="alert"></p>
+
+      <p id="server-status" class="server-status">
+        <span class="dot"></span><span class="status-text">Checking login server…</span>
+      </p>
+    </form>
+  </main>
+
+  <!-- ============ DASHBOARD ============ -->
+  <div id="dashboard" class="dashboard" hidden>
+    <header class="topbar">
+      <div class="topbar-brand">
+        <div class="logo-mark" aria-hidden="true">L</div>
+        <div>
+          <div class="brand-name brand-name--sm">Lumière Naturals</div>
+          <div class="brand-tagline">Nourish · Shine · Grow</div>
+        </div>
+      </div>
+      <button id="logout-button" type="button" class="btn btn--ghost">Log Out</button>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h2 id="welcome">Welcome back</h2>
+        <p id="order-summary" class="hero-sub"></p>
+      </div>
+      <div class="hero-points">
+        <div id="hero-points" class="points-value">0</div>
+        <div class="points-label">Loyalty points</div>
+      </div>
+    </section>
+
+    <div class="content">
+      <section class="card">
+        <h3 class="card-title">My Orders</h3>
+        <ul id="orders-list" class="orders"></ul>
+      </section>
+
+      <section class="card">
+        <h3 class="card-title">My Profile</h3>
+        <dl id="profile" class="profile"></dl>
+        <p class="points-note">You earn 1 loyalty point for every ₹10 you spend.</p>
+      </section>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
